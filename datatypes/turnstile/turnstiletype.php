@@ -84,10 +84,7 @@ class turnstileType extends eZDataType
 
   function isInformationCollector()
   {
-    // Turnstile should typically validate on final submission, not just collection
-    // Setting this to false might be more appropriate depending on exact workflow.
-    // Review if forms rely on information collection steps before final submit.
-    return false; // Changed from true
+    return true;  // Changed from false to enable information collection
   }
 
   function hasObjectAttributeContent( $contentObjectAttribute )
@@ -115,7 +112,7 @@ class turnstileType extends eZDataType
       else {
           // Fallback to the first key if no hostname match (or handle error)
           $keyArray = array_values($secretKey);
-          $secretKey = $keyArray[0] ?? null;
+          $secretKey = isset($keyArray[0]) ? $keyArray[0] : null;
       }
     }
 

@@ -67,7 +67,7 @@ class TurnstileTemplateOperator {
 					else {
                         // Fallback to the first key if no hostname match (or handle error)
                         $keyArray = array_values($siteKey);
-                        $siteKey = $keyArray[0] ?? null;
+                        $siteKey = isset($keyArray[0]) ? $keyArray[0] : null;
                     }
 				}
 
