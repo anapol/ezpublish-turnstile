@@ -1,9 +1,9 @@
 <?php /* #?ini charset="utf-8"?
 
 [TemplateSettings]
-ExtensionAutoloadPath[]=recaptcha
+ExtensionAutoloadPath[]=turnstile
 
 [RegionalSettings]
-TranslationExtensions[]=recaptcha
+TranslationExtensions[]=turnstile
 
 */ ?>

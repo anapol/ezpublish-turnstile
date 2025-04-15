@@ -10,4 +10,5 @@ lang: RecaptchaLang
 };
 {/literal}
 </script>
-{recaptcha_get_html()}
+{* Turnstile widget placeholder *}
+{turnstile_get_html()}

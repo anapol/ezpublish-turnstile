@@ -1,9 +1,12 @@
 <?php
 /**
- * reCAPTCHA extension for eZ Publish
- * Written by Bruce Morrison <bruce@stuffandcontent.com>
- * Copyright (C) 2008. Bruce Morrison.  All rights reserved.
+ * Turnstile CAPTCHA extension for eZ Publish
+ * Based on the reCAPTCHA extension by Bruce Morrison <bruce@stuffandcontent.com>
+ * Adapted for Turnstile by [Your Name/Company]
+ * Copyright (C) 2008. Bruce Morrison. All rights reserved.
+ * Copyright (C) [Current Year] [Your Name/Company]. All rights reserved.
  * http://www.stuffandcontent.com
+ * [Your Website]
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,20 +22,16 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-class recaptchaInfo
+class turnstileInfo
 {
     static function info()
     {
         return array(
-            'Name' => "reCAPTCHA eZ Publish Integration",
-            'Version' => "1.3",
-            'Author' => "<a href='http://www.stuffandcontent.com'>Bruce Morrison</a>",
-            'Copyright' => "Copyright (C) 2008-2011 Bruce Morrison",
+            'Name' => "Turnstile eZ Publish Integration",
+            'Version' => "1.4",
+            'Author' => "<a href='http://www.stuffandcontent.com'>Bruce Morrison</a> (Original reCAPTCHA), Adapted by [Your Name/Company]",
+            'Copyright' => "Copyright (C) 2008-2011 Bruce Morrison, Copyright (C) [Current Year] [Your Name/Company]",
             'License' => "GNU General Public License v2.0",
-            'Includes the following third-party software' => array( 'Name' => 'PHP Library for reCAPTCHA',
-                                                                    'Version' => '1.11',
-                                                                    'License' => 'GPL - Mike Crawford &  Ben Maurer 2007',
-                                                                    'For more information' => 'http://recaptcha.net/plugins/php/' )
         );
     }
 }

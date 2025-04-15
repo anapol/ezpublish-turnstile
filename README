@@ -1,45 +1,51 @@
-reCAPTCHA Module
+Turnstile Module
 ===========================
-reCAPTCHA is an extension that allows the integration of the reCAPTCHA
-anti-spam CAPTCHA service in your eZ publish content objects.  reCAPTCHA
-provides a reCAPTCHA datatype that can be used in editing content and
-information collection. reCAPTCHA provides both text and audio CAPTCHAs.
+Turnstile is an extension that allows the integration of the Cloudflare Turnstile
+anti-spam CAPTCHA service in your eZ Publish content objects. Turnstile
+provides a Turnstile datatype that can be used in editing content and
+information collection.
 
-About reCAPTCHA
+About Turnstile
 ---------------
-Over 60 million CAPTCHAs are solved every day by people around the world.
-reCAPTCHA channels this human effort into helping to digitize books from the
-Internet Archive. When you solve a reCAPTCHA, you help preserve literature by
-deciphering a word that was not readable by computers. 
+Cloudflare Turnstile delivers frustration-free, CAPTCHA-free web experiences to website visitors - with just a simple snippet of free code. Moreover, Turnstile stops abuse and confirms visitors are real without the data privacy concerns or awful UX that CAPTCHAs entail.
 
-reCAPTCHA is a project of the School of Computer Science at Carnegie Mellon
-University.
-
-From: https://developers.google.com/recaptcha/
-
+From: https://www.cloudflare.com/products/turnstile/
 
 Installation
 -----------------
-Follow these steps to add the reCAPTCHA module to your eZ publish installation:
+Follow these steps to add the Turnstile module to your eZ publish installation:
 
-  1) Extract the archive into the /extension directory
+  1) Place the extension files in your eZ Publish /extension directory
+     (e.g., /extension/turnstile if you create a subdirectory, or place files directly)
 
-  2) Edit site.ini.append in /settings/override. Add the following to the file:
+  2) Activate the extension. Edit site.ini.append in /settings/override (or your siteaccess settings). Add the following lines if they don't exist, or add 'turnstile' to the existing arrays:
 
        [ExtensionSettings]
-       ActiveExtensions[]=recaptcha
+       ActiveExtensions[]=turnstile
 
-     If you already have the [ExtensionSettings] block, just add the second line.
+       [TemplateSettings]
+       ExtensionAutoloadPath[]=turnstile
 
-  3) Visit https://www.google.com/recaptcha/admin to signup and get your own API keys
+       [RegionalSettings]
+       TranslationExtensions[]=turnstile
 
-  4) Edit extension/settings/recaptcha.ini.append.php and add your API keys
+       [DataTypeSettings]
+       ExtensionDirectories[]=turnstile
+       AvailableDataTypes[]=turnstile
 
-  5) Clear Cache
+       [ModuleSettings]
+       ExtensionRepositories[]=turnstile
+       ModuleList[]=turnstile
+
+  3) Visit https://dash.cloudflare.com/ to sign up for a Cloudflare account (if you don't have one) and get your Turnstile Site Key and Secret Key.
+
+  4) Edit extension/turnstile/settings/turnstile.ini.append.php (or settings/turnstile.ini.append.php if installed at root) and add your API keys (SiteKey and SecretKey).
+
+  5) Clear Cache (e.g., using `php bin/php/ezcache.php --clear-all`)
 
 Usage
 ----------------
-To use, simply add a reCAPTCHA attribute to your content class.  
+To use, simply add a Turnstile attribute to your content class.
 
 License
 -----------------

@@ -1,6 +1,6 @@
 <?php
 
-$Module = array( "name" => "reCAPTCHA" );
+$Module = array( "name" => "Turnstile" );
 
 $ViewList = array();
 

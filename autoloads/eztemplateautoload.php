@@ -1,9 +1,12 @@
 <?php
 /**
- * reCAPTCHA extension for eZ Publish
- * Written by Bruce Morrison <bruce@stuffandcontent.com>
- * Copyright (C) 2008. Bruce Morrison.  All rights reserved.
+ * Turnstile CAPTCHA extension for eZ Publish
+ * Based on the reCAPTCHA extension by Bruce Morrison <bruce@stuffandcontent.com>
+ * Adapted for Turnstile by [Your Name/Company]
+ * Copyright (C) 2008. Bruce Morrison. All rights reserved.
+ * Copyright (C) [Current Year] [Your Name/Company]. All rights reserved.
  * http://www.stuffandcontent.com
+ * [Your Website]
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -21,9 +24,9 @@
 
 $eZTemplateOperatorArray = array();
 $eZTemplateOperatorArray[] = array(
-	'script' => 'extension/recaptcha/autoloads/recaptchatemplateoperator.php', 
-	'class' => 'reCAPTCHATemplateOperator', 
-	'operator_names' => array ( 'recaptcha_get_html' ), 
+	'script' => 'extension/turnstile/autoloads/turnstiletemplateoperator.php',
+	'class' => 'TurnstileTemplateOperator',
+	'operator_names' => array ( 'turnstile_get_html' ),
 );
 
 ?>
