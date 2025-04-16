@@ -2,11 +2,11 @@
 /**
  * Turnstile CAPTCHA extension for eZ Publish
  * Based on the reCAPTCHA extension by Bruce Morrison <bruce@stuffandcontent.com>
- * Adapted for Turnstile by [Your Name/Company]
+ * Adapted for Turnstile by anapol s.r.o.
  * Copyright (C) 2008. Bruce Morrison. All rights reserved.
- * Copyright (C) [Current Year] [Your Name/Company]. All rights reserved.
+ * Copyright (C) 2025 anapol s.r.o. All rights reserved.
  * http://www.stuffandcontent.com
- * [Your Website]
+ * https://anapol.cz
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -29,8 +29,8 @@ class turnstileInfo
         return array(
             'Name' => "Turnstile eZ Publish Integration",
             'Version' => "1.4",
-            'Author' => "<a href='http://www.stuffandcontent.com'>Bruce Morrison</a> (Original reCAPTCHA), Adapted by [Your Name/Company]",
-            'Copyright' => "Copyright (C) 2008-2011 Bruce Morrison, Copyright (C) [Current Year] [Your Name/Company]",
+            'Author' => "<a href='http://www.stuffandcontent.com'>Bruce Morrison</a> (Original reCAPTCHA), Adapted by anapol s.r.o.",
+            'Copyright' => "Copyright (C) 2008-2011 Bruce Morrison, Copyright (C) 2025 anapol s.r.o.",
             'License' => "GNU General Public License v2.0",
         );
     }
